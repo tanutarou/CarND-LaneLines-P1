@@ -3,7 +3,7 @@
 
 Overview
 ---
-This is jupyter-notebook to find lane lines on the road.
+This is jupyter-notebook to find lane lines on the road.  
 This detection program uses only fundamental computer vision techniques(Canny edge detection, Hough transformation).
 
 <img src="img/overlay.png" width="480"  />
