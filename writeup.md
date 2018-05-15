@@ -13,7 +13,19 @@ The goals / steps of this project are the following:
 
 [//]: # (Image References)
 
-[image1]: ./examples/grayscale.jpg "Grayscale"
+[color_select]: ./img/color_select.png "Grayscale"
+
+[blur_gray]: ./img/blur_gray.png "Grayscale"
+
+[edges]: ./img/edges.png "Grayscale"
+
+[masked_edges]: ./img/masked_edges.png "Grayscale"
+
+[line_image]: ./img/line_image.png
+
+[line_simple]: ./img/line_simple.png
+
+[overlay]: ./img/overlay.png
 
 ---
 
@@ -34,9 +46,36 @@ Finally, I drow the lines to the original image.
 In order to draw a single line on the left and right lanes, I modified the draw_lines() function. I separated line segments by whether their slope are negative or positive, then I calculated the line's slope and intersept. I calculated medians of them. Because median is robust for outliers. 
 By doing this, I can get 2 lines(left and right). Finally, I drow the lines.
 
+The result images of each step of my pipeline are shown below.  
+
 - Extracting yellow segments and white segments
 
-![color_segment][image1]
+![color_segment][color_select]
+
+- Applay Gaussian smoothing
+
+![color_segment][blur_gray]
+
+- Apply Canny edge detection
+
+![color_segment][edges]
+
+- Masked by the region of interest
+
+![color_segment][masked_edges]
+
+- Apply Hogh transform to detect lines
+
+![color_segment][line_image]
+
+- Drawing single line
+
+![color_segment][line_simple]
+
+- Overlay lines
+
+![color_segment][overlay]
+
 
 
 ### 2. Identify potential shortcomings with your current pipeline
